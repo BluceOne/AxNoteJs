@@ -1,53 +1,290 @@
-$("head").append(
-    '<style type="text/css">div[data-label="AxurePlus-Marker"]{cursor:pointer}.axp_note{position:fixed!important;display:block;visibility:visible !important;top:0!important;right:0!important;left:auto!important;width:450px;min-width:450px;height:100% !important;background-color:#fcfcfc;overflow:auto !important;box-sizing:border-box;z-index:599}.axp_note>.axp_state{position:relative !important;display:block!important;visibility:visible!important;min-height:20px;border:10px solid rgba(0,0,0,0) !important;border-left-width:36px !important;border-right-width:45px!important;overflow:visible!important}#note-toggle:hover{background-color:#efefef !important}.axp_note>.ui-resizable-w{position:absolute;display:block;visibility:visible;cursor:col-resize;width:5px;left:0;top:0;height:100%;border-left:1px solid #8f949a}.axp_note>.ui-resizable-w:hover{border-left-width:3px}.index-of-state{position:absolute;left:-28px;width:18px;height:18px;line-height:18px;text-align:center;border:1px solid white;border-radius:18px;font-size:12px;color:white;background-color:#cecece;-moz-box-shadow:1px 1px 5px #333;-webkit-box-shadow:1px 1px 5px #333;box-shadow:1px 1px 5px #333;cursor:pointer}.index-of-state:hover{-moz-box-shadow:1px 1px 1px #333;-webkit-box-shadow:1px 1px 1px #333;box-shadow:1px 1px 1px #333}.item-wrap{float:right;width:16px;height:26px;margin:2px 0;cursor:pointer}.color-selector-item{float:right;width:16px;height:100%;background-color:#cecece;border-radius:2px}.axp_state.show,.show{display:block !important}.axp_state.hide,.hide{display:none !important}</style>'
-), $.fn.shake = function (a, b, c) {
-    return this.each(function () {
-        var e, d = $(this).position().left;
-        for (e = 1; a >= e; e++) $(this).animate({
-            left: d + -1 * b
-        }, c / a / 4).animate({
-            left: d + b
-        }, c / a / 2).animate({
-            left: d
-        }, c / a / 4)
-    }), this
-}, $.fn.getBgColor = function () {
-    function b(a) {
-        return ("0" + parseInt(a).toString(16)).slice(-2)
-    }
-    var a;
-    if ($(this).is("div")) {
-        if (a = $(this).css("background-color"), a >= 0) return a;
-        a = a.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/), a = "#" + b(a[1]) + b(a[2]) + b(a[3])
-    } else a = "#009dd9";
-    return a
-};
-eval(function (p, a, c, k, e, d) {
-    e = function (c) {
-        return (c < a ? '' : e(parseInt(c / a))) + ((c = c % a) > 35 ? String.fromCharCode(c + 29) : c.toString(
-            36))
-    };
-    if (!''.replace(/^/, String)) {
-        while (c--) {
-            d[e(c)] = k[c] || e(c)
-        }
-        k = [function (e) {
-            return d[e]
-        }];
-        e = function () {
-            return '\\w+'
-        };
-        c = 1
-    };
-    while (c--) {
-        if (k[c]) {
-            p = p.replace(new RegExp('\\b' + e(c) + '\\b', 'g'), k[c])
-        }
-    }
-    console(p);
-    return p
-}(
-    '6 1L(a,b){q[a]&&(9.k.B[a]^b?($.n(q[a],6(a,b){b.1a().1l(8)&&"1m"!=b.j("18")&&(x-=b.19()),b.1R("1F").1c("1i")}),9.k.B[a]=!1,E.D(\'[p="\'+a+\'"]\').h(4)):($.n(q[a],6(a,b){b.1a().1l(8)&&"1m"==b.j("18")&&(x+=b.19()),b.1R("1i").1c("1F")}),9.k.B[a]=!0,E.D(\'[p="\'+a+\'"]\').h(16)),1J())}6 1d(a,b){9.k.L=a,9.k.T=b,1p()}6 1p(){1O.2K("k",2d.2L(9.k))}6 1W(){1h||(R.n(6(){u b=0,c=0;$(3).D("l").n(6(){u a,d;$(3).1l(":1T")||"1m"==$(3).j("18")||(a=$(3).H().o+$(3).A(),b=a>b?a:b,d=$(3).H().N+$(3).19(),c=d>c?d:c)}),$(3).h(b).v(c)}),1h=!0,R.n(6(){x+=$(3).19()}),x+=25,x>$(9).v()&&Q.j("v",x+"r"))}6 1f(){1V($("i").7("s-G")){1V($("i").7("1H")){u a=$("t").m()>$("i").m()?$("t").m():$("i").m();$("t,i").12({m:a-8.A()},0),$("i").1n("1H")}$("i").h($("i").h()-P($("i").7("s-G"))).1n("s-G"),z.n(6(){$(3).7("Z")&&$(3).j("o",$(3).7("Z")).1n("Z"),$(3).7("W")&&$(3).j("y",$(3).7("W")).1n("W")})}8.1i(),O.7("1r",U),1d(!1,8.h())}6 11(){8.1F(),1W(),O.7("1r",1M),$("i").7("s-G")||($("i").7("1U",$("i").h()).h($("i").h()+8.A()).7("s-G",8.A()),z.n(6(){u b="2G%"==$(3).j("o")?!0:!1,c="2M"==$(3).j("o")?!0:!1,d=P($(3).j("o")),e=P($(3).j("y"));d==$(9).h()/2||b?($(3).j("o",($(9).h()-8.A())/2+"r"),$(3).7("Z",$(9).h()/2+"r").7("Y","1x")):(d>e||c)&&($(3).j("y",e+8.A()+"r"),$(3).7("W",e+"r").7("Y","y"))})),1d(!0,8.h())}6 1Q(a){$("i").h(P($("i").7("1U"))+a).7("s-G",a),z.n(6(){"1x"==$(3).7("Y")?$(3).j("o",($(9).h()-a)/2+"r").7("Z",$(9).h()/2+"r"):"y"==$(3).7("Y")&&$(3).j("y",P($(3).7("W"))+a+"r")})}6 1J(){x>$(9).v()?Q.j("v",x+"r"):Q.j("v","25%")}6 2N(a){a.2U("[[")<0&&$("2V").J(\'<K 2W="1j/j">.1b{S:\'+a.1C()+"!2T}</K>")}u 15,C,8,R,F,1h,x,z,U,1M,O,E,q,Q,V,1P,1K;9.k={L:!1,T:2S,B:{}},15=$(\'l[s-1g="1o-1s"]\'),C={},15.n(6(){C[$.1C($(3).1j())]=$(3),$(3).7("13",$(3).D("[1B^="+$(3).7("1B")+"2O]:2C").2h())}),8=$(\'l[s-1g="1o-1t"]\').1c("1b").1i(),8.D(\'[s-1g="--2Q"]\').2R(),R=8.D(">.21").1c("2X"),F={},R.n(6(){u b=$(3).7("s-1g").2m(/\\d+/);b&&($(3).7("1S",b[0]),F[b[0]]=$(3))}),1h=!1,x=0,z=$(".21").1a().22(".1b"),z.n(6(){"1u"!=$(3).j("H")&&(z=z.22($(3)))}),8.26>1?2k(6(){1k("有"+8.26+"个“1o-1t”注释面板，仅支持1个，请检查")},2p):(U="s:2r/1e+2A,<1e 2s=\'2t://2u.2B.2v/2y/1e\' h=\'14\' v=\'16\' 2x=\'0 0 14 16\'><2l 20=\'#1X\' 20-2Y=\'36\' d=\'3o 3p 1 0 0 1 1 3q 1 0 0 1-1 3n 1 0 0 1-1-3s 1 0 0 1 1-3j 3k 3l 1 0 0 1 0 1N 1 0 1 1 0-27 1Y 1 0 0 1 0 1N 1 0 1 1 0-27 1Y 1 0 0 1 0 1N 1 0 0 1 0-2z\'/></1e>",1M=U.3t("#1X","#3u"),O=$(\'<3m 1B="8-34" K="H:1u;N:35;y:3i;v:33;1Z:32;1q-28:23;2Z:30;S-p:#24;" 1r="\'+U+\'"/>\'),$("i").J(O),O.17(6(){9.k.L?1f():11()}),E=$(\'<l K="H:1u;N:3e;y:3f;h:3g;S-p:#24;1Z:23;1q-28: 3c"></l>\'),$("i").J(E),q={},15.n(6(){u a=$(3).7("13");q[a]||(q[a]=[],E.J(\'<l M="X-2b"><l M="p-1v-X" K="S-p:\'+a+\'" p="\'+a+\'"></l></l>\'),9.k.B[a]=!0),q[a].1w($(3))}),R.n(6(){u c,d,b=$(3).7("1S");b&&C[b]?(c=$(\'<l M="1A-1y-1z" K="p:\'+C[b].7("13")+";S-p:"+C[b].j("p")+";1q:3a 3b "+C[b].7("13")+\'">\'+b+"</l>"),$(3).J(c),c.17(6(){u b,d,e,f,g,a=C[c.1j()];a.1l(":1T")||"1m"==a.j("18")||(b=a[0].2P(),d=$("t").m()>$("i").m()?$("t").m():$("i").m(),e=$("t").I()>$("i").I()?$("t").I():$("i").I(),f=0,b.o<0?f=b.o:b.y>$(9).h()-8.A()&&(f=b.y-($(9).h()-8.A())),g=0,b.N<0?g=b.N:b.2j>$(9).v()&&(g=b.2j-$(9).v()),0==f&&0==g?a.1D(4,5,1E):$("t,i").12({m:d+f},{2g:1I,29:!1}).12({I:e+g},{2g:1I,29:!1,3d:6(){a.1D(4,5,1E)}}))}),q[C[b].7("13")].1w($(3))):(d=$(\'<l M="1A-1y-1z">-</l>\'),$(3).J(d),d.17(6(){1k("该注释没有对应的标记，请检查1s和1t中相关状态的名称(需包含对应1s的数字)")}),q["#10"]||(q["#10"]=[],E.J(\'<l M="X-2b"><l M="p-1v-X" p="#10"></l></l>\'),9.k.B["#10"]=!0),q["#10"].1w($(3)))}),E.D("l.p-1v-X").n(6(){u a=$(3).2h();$(3).1a().17(6(){1L(a,!1),1p()})}),8.2e({38:"w",37:P(8.j("31-h")),2i:6(a,b){1d(!0,b.2f.h),1Q(b.2f.h)}}),Q=$(".1b>.3h-2e-w"),1O.2c("k")?(V=2d.3v(1O.2c("k")),9.k.L=V.L,9.k.T=V.T,$.3r(9.k.B,V.B),8.j("h",9.k.T+"r"),1P=9.k.L,11(),$.n(9.k.B,6(a){1L(a,!0)}),1P||1f()):(11(),1f()),$(9).2i(6(){$("i").7("s-G")?1Q(8.h()):z.n(6(){"1x"==$(3).7("Y")&&$(3).j("o",$(9).h()/2+"r")}),1J()}),8.2n(6(){Q.j("o",8.m()+"r")}),1K=/^\\d+$/,15.17(6(){u b,a=$.1C($(3).1j());2o 1K.2q(a)?F[a]?(11(),8.12({I:8.I()+F[a].H().N,m:8.m()+F[a].H().o},2w,6(){F[a].D(".1A-1y-1z").1D(4,5,1E)}),$(3).2a().o+$(3).h()>8.2a().o&&(b=$("t").m()>$("i").m()?$("t").m():$("i").m(),$("t,i").12({m:b+8.A()},1I),$("i").7("1H",!0)),1G 0):(1k("标记“"+a+"”"+"没有相关注释，请检查"),1G 0):(1k("标记“"+a+"”"+"不符合要求，必须使用正整数"),1G 0)})),2F.2E("1o-2D, 2H: 2I@2J.39");',
-    62, 218,
-    '|||this|||function|attr|note|window||||||||width|body|css|axpData|div|scrollLeft|each|left|color|colorSelectorData|px|data|html|var|height||noteContentHeight|right|fixedPanel|outerWidth|colorSet|markerMap|find|colorSelector|stateMap|addedWidth|position|scrollTop|append|style|isNoteShow|class|top|toggleNoteBtn|parseFloat|resizeBorder|states|background|noteWidth|showImg|axpDataFromPrePage|oriRight|item|hPin|oriLeft|cecece|showNote|animate|bgColor||markers||click|display|outerHeight|parent|axp_note|addClass|updateNoteInSession|svg|hideNote|label|isNoteInited|hide|text|alert|is|none|removeAttr|AxurePlus|updateSession|border|src|Marker|Note|fixed|selector|push|center|of|state|index|id|trim|shake|600|show|void|scrolled4note|400|resizeHandle|re|resetObjsWithColor|hideImg|2H4a1|sessionStorage|isShow|resizeNote|removeClass|num|hidden|oriWidth|if|initNote|6D6D6D|3h6a1|padding|fill|panel_state|not|3px|FCFCFC|100|length|2zm0|radius|queue|offset|wrap|getItem|JSON|resizable|size|duration|getBgColor|resize|bottom|setTimeout|path|match|scroll|return|500|test|image|xmlns|http|www|org|300|viewBox|2000||xml|w3|first|Pro|log|console|50|contact|youdao8|163|setItem|stringify|auto|setBg|_|getBoundingClientRect|help|remove|450|important|indexOf|head|type|axp_state|rule|cursor|pointer|min|8px|24px|toggle|5px|evenodd|minWidth|handles|com|1px|solid|2px|complete|50px|14px|16px|ui|7px|1zm1|2v12h10V2H2zm2|2h6a1|img|1H1a1|M1|0h12a1|1v14a1|extend|1V1a1|replace|009DD9|parse'
-    .split('|'), 0, {}))
+// 加载js
+javascript: $(function() {
+	function setBg(a) {
+		$("head").append('<style type="text/css">#axp-note-container{background:' + a.trim() + "!important}</style>")
+	}
+	var js = [[AxNoteJS]];
+	var bg = "[[AxNoteBg]]";
+	js && eval(js), bg && setBg(bg);
+	if (!$('body').attr('axp-add-done')) {
+		$('body').attr('axp-add-done', true);
+		try {
+			[
+				[AxNoteAdd]
+			]
+		} catch (e) {}
+	}
+});
+
+// AxNoteJs
+$(function() {
+	function removeAxPlusVar() {
+		var a = axDebugHost.find("#variablesDiv>div");
+		a.each(function() {
+			/axplus/gi.test($(this).text()) && $(this).remove()
+		})
+	}
+
+	function shake(a, b, c, d) {
+		var e, f;
+		for (a.stop(!0, !0), e = a.position().left, a.attr("ori-left") ? e = parseInt(a.attr("ori-left")) : a.attr("ori-left", a.position().left), f = 1; b >= f; f++) a.animate({
+			left: e + -1 * c
+		}, d / b / 4).animate({
+			left: e + c
+		}, d / b / 2).animate({
+			left: e
+		}, d / b / 4);
+		return a
+	}
+
+	function getBgColor(e) {
+		var rgb, img, canvas, ctx, centerPoint;
+		if (e.is("div")) {
+			if (rgb = e.css("background-color"), rgb >= 0) return rgb;
+			rgb = rgb.match(eval("/^rgb\\((\\d+),\\s*(\\d+),\\s*(\\d+)\\)$/")), rgb = "#" + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3])
+		} else if (e.is("img")) try {
+			img = e[0], canvas = document.createElement("canvas"), canvas.width = 1, canvas.height = 1, ctx = canvas.getContext("2d"), ctx.drawImage(img, parseInt(img.width / 2), parseInt(img.height / 2), 1, 1, 0, 0, 1, 1), centerPoint = ctx.getImageData(0, 0, 1, 1).data, rgb = "#" + hex(centerPoint[0]) + hex(centerPoint[1]) + hex(centerPoint[2])
+		} catch (e) {}
+		return rgb ? rgb : defaultBgColor
+	}
+
+	function hex(a) {
+		return ("0" + parseInt(a).toString(16)).slice(-2)
+	}
+
+	function toast(a, b) {
+		$("#toast").text(a).show().css("marginLeft", -$("#toast").width() / 2 + "px"), setTimeout(function() {
+			$("#toast").text("").hide()
+		}, b ? b : 3e3)
+	}
+
+	function addValidIndex(a, b, c, d, e) {
+		void 0 == d && (d = 0), void 0 == e && (e = 0);
+		var f = $('<div class="axp-index" axp-for="' + c + '" style="color:' + defaultBgColor + ";background-color:" + defaultColor + ";border:1px solid " + defaultBgColor + '">' + b + "</div>");
+		a.append(f), f.css({
+			left: f.position().left + d,
+			top: f.position().top + e
+		})
+	}
+
+	function addInvalidIndex(a) {
+		a.append('<div class="axp-index">-</div>')
+	}
+
+	function getWHCss(a, b, c) {
+		void 0 == b && (b = 0), void 0 == c && (c = 0);
+		var d = 0,
+			e = 0;
+		return a.find("div").each(function() {
+			var a, b;
+			$(this).is(":hidden") || "none" == $(this).css("display") || (a = $(this).position().left + $(this).outerWidth(), d = a > d ? a : d, b = $(this).position().top + $(this).outerHeight(), e = b > e ? b : e)
+		}), {
+			width: d - b,
+			height: e - c
+		}
+	}
+
+	function startNote() {
+		function i(a, c) {
+			h[a] && (window.axpData.colorSet[a] ^ c ? ($.each(h[a], function(a, c) {
+				c.parent().is(noteContainer) && "none" != c.css("display") ? b -= c.outerHeight() : "axp-marker" == c.attr("data-label") && (c.parent().find(">div").not(c).addClass("hide"), $('div[for="' + c.attr("id") + '"]').addClass("hide")), c.addClass("hide")
+			}), window.axpData.colorSet[a] = !1, g.find('[color="' + a + '"]').width(4)) : ($.each(h[a], function(a, c) {
+				c.parent().is(noteContainer) && "none" == c.css("display") ? b += c.outerHeight() : "axp-marker" == c.attr("data-label") && (c.parent().find(">div").not(c).removeClass("hide"), $('div[for="' + c.attr("id") + '"]').removeClass("hide")), c.removeClass("hide")
+			}), window.axpData.colorSet[a] = !0, g.find('[color="' + a + '"]').width(14)), s())
+		}
+
+		function m(a, b) {
+			window.axpData.isNoteShow = a, window.axpData.noteWidth = b, n()
+		}
+
+		function n() {
+			sessionStorage.setItem("axpData", JSON.stringify(window.axpData))
+		}
+
+		function o() {
+			a || (a = !0, noteContainer.find(".axp-note-item").each(function() {
+				b += $(this).outerHeight()
+			}), b += 200, b > $(window).height() && j.css("height", b + "px"))
+		}
+
+		function p() {
+			if ($("body").attr("data-addedWidth")) {
+				if ($("body").attr("scrolled4note")) {
+					var a = $("html").scrollLeft() > $("body").scrollLeft() ? $("html").scrollLeft() : $("body").scrollLeft();
+					$("html,body").animate({
+						scrollLeft: a - noteContainer.outerWidth()
+					}, 0), $("body").removeAttr("scrolled4note")
+				}
+				$("body").width($("body").width() - parseFloat($("body").attr("data-addedWidth"))).removeAttr("data-addedWidth"), e.each(function() {
+					$(this).attr("oriLeft") && $(this).removeAttr("oriLeft"), $(this).attr("oriRight") && $(this).css("right", $(this).attr("oriRight")).removeAttr("oriRight")
+				})
+			}
+			noteContainer.hide(), f.find("path").attr("fill", "#6D6D6D"), m(!1, noteContainer.width())
+		}
+
+		function q() {
+			noteContainer.show(), o(), f.find("path").attr("fill", "#0099ff"), $("body").attr("data-addedWidth") || ($("body").attr("oriWidth", $("body").width()).width($("body").width() + noteContainer.outerWidth()).attr("data-addedWidth", noteContainer.outerWidth()), e.each(function() {
+				var b = "50%" == $(this).css("left") ? !0 : !1,
+					c = "auto" == $(this).css("left") ? !0 : !1,
+					d = parseFloat($(this).css("left")),
+					e = parseFloat($(this).css("right"));
+				d == $(window).width() / 2 || b ? ($(this).hasClass("pin_center") || $(this).addClass("pin_center"), $(this).attr("oriLeft", $(window).width() / 2 + "px").attr("hPin", "center")) : (d > e || c) && ($(this).css("right", e + noteContainer.outerWidth() + "px"), $(this).attr("oriRight", e + "px").attr("hPin", "right"))
+			})), m(!0, noteContainer.width())
+		}
+
+		function r(a) {
+			$("body").width(parseFloat($("body").attr("oriWidth")) + a).attr("data-addedWidth", a), e.each(function() {
+				"center" == $(this).attr("hPin") ? $(this).attr("oriLeft", $(window).width() / 2 + "px") : "right" == $(this).attr("hPin") && $(this).css("right", parseFloat($(this).attr("oriRight")) + a + "px")
+			})
+		}
+
+		function s() {
+			b > $(window).height() ? j.css("height", b + "px") : j.css("height", "100%")
+		}
+
+		function t(a, b) {
+			if (void 0 == b && (b = !1), c && (c.removeClass("marker_checked"), "axp-marker" != c.attr("data-label") || c.is(a) || c.parent().find('>div:not([data-label^="axp-"])').hide()), c = a, a.addClass("marker_checked"), "axp-marker" == a.attr("data-label")) {
+				var d = a.parent().find('>div:not([data-label^="axp-"])');
+				b ? d.is(":hidden") || "none" == d.css("display") ? d.show() : d.hide() : d.show()
+			}
+		}
+
+		function u(a) {
+			var b, c;
+			d && (b = $("#" + d.attr("axp-for")).attr("bgColor"), d.css({
+				backgroundColor: "#ffffff",
+				borderColor: b,
+				color: b
+			})), d = a, c = $("#" + a.attr("axp-for")), b = c.attr("bgColor"), a.css({
+				backgroundColor: b,
+				borderColor: "#ffffff",
+				color: "#ffffff"
+			})
+		}
+		var a, b, c, d, e, f, g, h, j, k, l;
+		oldMarkers.add(axpMarkers).each(function() {
+			var b = getBgColor($(this).find("[id^=" + $(this).attr("id") + "_]:first"));
+			noteContainer.find('.axp-index[axp-for="' + $(this).attr("id") + '"]').css({
+				color: b,
+				backgroundColor: $(this).css("color"),
+				borderColor: b
+			}), $(this).attr("bgColor", b)
+		}), a = !1, b = 0, c = null, d = null, e = $(".panelstate"), f = $('<svg id="note-toggle" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24"><path d="M151.893333 0h720.213334c60.32384 0 109.226667 48.902827 109.226666 109.226667v805.546666c0 60.32384-48.902827 109.226667-109.226666 109.226667H151.893333c-60.32384 0-109.226667-48.902827-109.226666-109.226667V109.226667C42.666667 48.902827 91.569493 0 151.893333 0z m692.906667 267.946667c0-33.931947-27.508053-61.44-61.44-61.44H240.64c-33.931947 0-61.44 27.508053-61.44 61.44s27.508053 61.44 61.44 61.44h542.72c33.931947 0 61.44-27.508053 61.44-61.44z m0 245.76c0-33.931947-27.508053-61.44-61.44-61.44H240.64c-33.931947 0-61.44 27.508053-61.44 61.44s27.508053 61.44 61.44 61.44h542.72c33.931947 0 61.44-27.508053 61.44-61.44zM527.36 759.466667c0-33.931947-27.508053-61.44-61.44-61.44H240.64c-33.931947 0-61.44 27.508053-61.44 61.44s27.508053 61.44 61.44 61.44h225.28c33.931947 0 61.44-27.508053 61.44-61.44z" fill="#6D6D6D"></path></svg>'), $("body").append(f), f.click(function() {
+			window.axpData.isNoteShow ? p() : q()
+		}), g = $('<div style="position:fixed;top:42px;right:16px;width:18px;background-color:#FCFCFC;padding:1px 0;border-radius:3px;z-index: 600"></div>'), $("body").append(g), h = {}, oldMarkers.add(axpMarkers).each(function() {
+			var a = $(this).attr("bgColor");
+			h[a] || (h[a] = [], g.append('<div class="item-wrap"><div class="color-selector-item" style="background-color:' + a + '" color="' + a + '"></div></div>'), window.axpData.colorSet[a] = !0), h[a].push($(this))
+		}), noteContainer.find(".axp-index").click(function() {
+			var a, b, c, d, e, f;
+			if ($(this).attr("axp-for")) {
+				if (a = $("#" + $(this).attr("axp-for")), u($(this)), t(a), a.is(":hidden") || "none" == a.css("display")) return toast("该注释对应的标记隐藏中，请显示后查看"), void 0;
+				b = a[0].getBoundingClientRect(), c = $("html").scrollLeft() > $("body").scrollLeft() ? $("html").scrollLeft() : $("body").scrollLeft(), d = $("html").scrollTop() > $("body").scrollTop() ? $("html").scrollTop() : $("body").scrollTop(), e = 0, b.left < 0 ? e = b.left : b.right > $(window).width() - noteContainer.outerWidth() && (e = b.right - ($(window).width() - noteContainer.outerWidth())), f = 0, b.top < 0 ? f = b.top : b.bottom > $(window).height() && (f = b.bottom - $(window).height()), 0 == e && 0 == f ? shake(a, 4, 5, 600) : $("html,body").animate({
+					scrollLeft: c + e
+				}, {
+					duration: 400,
+					queue: !1
+				}).animate({
+					scrollTop: d + f
+				}, {
+					duration: 400,
+					queue: !1,
+					complete: function() {
+						shake(a, 4, 5, 600)
+					}
+				})
+			} else toast("该注释没有对应的标记，请检查")
+		}).each(function() {
+			$(this).attr("axp-for") ? h[$("#" + $(this).attr("axp-for")).attr("bgColor")].push($(this).parent()) : (h["#cecece"] || (h["#cecece"] = [], g.append('<div class="item-wrap"><div class="color-selector-item" color="#cecece"></div></div>'), window.axpData.colorSet["#cecece"] = !0), h["#cecece"].push($(this).parent()))
+		}), g.find("div.color-selector-item").each(function() {
+			var a = $(this).attr("color");
+			$(this).parent().click(function() {
+				i(a, !1), n()
+			})
+		}), noteContainer.resizable({
+			handles: "w",
+			minWidth: parseFloat(noteContainer.css("min-width")),
+			resize: function(a, b) {
+				m(!0, b.size.width), r(b.size.width)
+			}
+		}), j = noteContainer.find(">.ui-resizable-w"), sessionStorage.getItem("axpData") ? (k = JSON.parse(sessionStorage.getItem("axpData")), window.axpData.isNoteShow = k.isNoteShow, window.axpData.noteWidth = k.noteWidth, $.extend(window.axpData.colorSet, k.colorSet), noteContainer.css("width", window.axpData.noteWidth + "px"), l = window.axpData.isNoteShow, q(), $.each(window.axpData.colorSet, function(a) {
+			i(a, !0)
+		}), l || p()) : (q(), p()), $(window).resize(function() {
+			$("body").attr("data-addedWidth") && r(noteContainer.width()), s()
+		}), noteContainer.scroll(function() {
+			j.css("left", noteContainer.scrollLeft() + "px")
+		}), oldMarkers.add(axpMarkers).click(function() {
+			var b, c, d, e, f, a = $.trim($(this).text());
+			return re.test(a) || "axp-marker" == $(this).attr("data-label") ? (b = noteContainer.find('[axp-for="' + $(this).attr("id") + '"]'), 0 == b.length ? (toast("标记“" + a + "”" + "没有对应的注释，请检查"), void 0) : (t($(this), !0), u(noteContainer.find('[axp-for="' + $(this).attr("id") + '"]')), q(), c = b.parent(), d = 0, e = 0, c.attr("axp-top") && c.attr("axp-left") && (d = parseInt(c.attr("axp-top")), e = parseInt(c.attr("axp-left"))), noteContainer.animate({
+				scrollTop: noteContainer.scrollTop() + c.position().top + d,
+				scrollLeft: noteContainer.scrollLeft() + c.position().left + e
+			}, 300, function() {
+				shake(b, 4, 5, 600)
+			}), $(this).offset().left + $(this).width() > noteContainer.offset().left && (f = $("html").scrollLeft() > $("body").scrollLeft() ? $("html").scrollLeft() : $("body").scrollLeft(), $("html,body").animate({
+				scrollLeft: f + noteContainer.outerWidth()
+			}, 400), $("body").attr("scrolled4note", !0)), void 0)) : (toast("标记“" + a + "”" + "不符合要求，必须使用正整数"), void 0)
+		}), axpMarkers.each(function() {
+			var a = $(this),
+				b = $('<div for="' + $(this).attr("id") + '" style="position:absolute;left:' + ($(this).position().left + $(this).width() / 2 - 10) + "px;top:" + ($(this).position().top + $(this).height() / 2 - 10) + 'px;width:20px;height:20px;border-radius:10px;cursor:pointer"/>');
+			a.parent().parent().after(b), b.click(function() {
+				a.click()
+			}).hover(function() {
+				a.addClass("marker_hover")
+			}, function() {
+				a.removeClass("marker_hover")
+			})
+		}), setAd('<div class="copyright">The Notes feature is designed by <a href="mailto:86436886@163.com" target="_blank">86436886@163.com</a></div>')
+	}
+
+	function addTip(a) {
+		noteContainer.find("#axp_tip").append(a).show()
+	}
+
+	function setAd(a) {
+		noteContainer.find("#axp_ad").html(a).show()
+	}
+	var axDebugHost, traces, oriLen, defaultBgColor, defaultColor, oldMarkers, axpMarkers, oldMarkerMap, re, axpIndex, noteContainer, oldNotes, pngSrcs, img, flag, imgTotal, i;
+	if (!$("body").attr("axp-done")) {
+		$("body").attr("axp-done", !0);
+		try {
+			axDebugHost = $("#debugHost", window.parent.document), axDebugHost.length > 0 && (removeAxPlusVar(), axDebugHost.find("#variablesClearLink").on("click", function() {
+				removeAxPlusVar()
+			}), traces = axDebugHost.find("#traceDiv>div"), oriLen = traces.length, traces.each(function() {
+				/axp-/gi.test($(this).text()) && ($(this).remove(), oriLen--)
+			}), 0 >= oriLen && (axDebugHost.find("#traceEmptyState").show(), axDebugHost.find("#traceClearLinkContainer").hide()))
+		} catch (e) {}
+		if ($("head").append('<style type="text/css">div[data-label="AxurePlus-Marker"],div[data-label="axp-markerN"],div[data-label="axp-marker"]{cursor:pointer;z-index:99}.marker-highlight{-moz-box-shadow:0 0 5px 1px #09f;-webkit-box-shadow:0 0 5px 1px #09f;box-shadow:0 0 5px 1px #09f;border-radius:50px}div[data-label="axp-marker"]:hover,.marker_checked,.marker_hover{-moz-box-shadow:0 0 10px 3px #09f !important;-webkit-box-shadow:0 0 10px 3px #09f !important;box-shadow:0 0 10px 3px #09f !important;border-radius:50px}.marker-area{border-radius:3px;-moz-box-shadow:0 0 10px 2px #09f;-webkit-box-shadow:0 0 10px 2px #09f;box-shadow:0 0 10px 2px #09f}#axp-note-container{position:fixed;display:block;left:auto !important;top:0;right:0;width:450px;min-width:450px;height:100% !important;background-color:#fcfcfc;overflow:auto;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;z-index:599}.axp-note-item{position:relative;min-height:20px;border:10px solid rgba(0,0,0,0) !important;border-left-width:36px !important;border-right-width:50px !important;overflow:visible !important}div[data-label="axp-note"]{position:absolute;z-index:99}#axp_tip{display:none;padding:8px;margin:8px 50px 8px 8px;font-size:14px;text-align:left;background:#fbf1ef;border:1px solid #f8d9d7;border-radius:3px;color:#de5c41}#axp_ad{display:none;padding:8px;margin:20px 8px 8px 8px;color:#b8b8b8}#note-toggle{position:fixed;top:5px;right:11px;height:24px;padding:6px;border-radius:3px;cursor:pointer;background-color:#fcfcfc;z-index:600}#note-toggle:hover{background-color:#dcdcdc !important}#axp-note-container>.ui-resizable-w{position:absolute;display:block;visibility:visible;cursor:col-resize;width:5px;left:0;top:0;height:100%;border-left:1px solid #8f949a}#axp-note-container>.ui-resizable-w:hover{border-left-width:3px}.axp-index{position:absolute;left:-28px;width:18px;height:18px;line-height:18px;text-align:center;border:1px solid white;border-radius:18px;font-size:12px;color:white;background-color:#cecece;-moz-box-shadow:1px 1px 5px #333;-webkit-box-shadow:1px 1px 5px #333;box-shadow:1px 1px 5px #333;cursor:pointer;z-index:99}.axp-index:hover{-moz-box-shadow:1px 1px 1px #333;-webkit-box-shadow:1px 1px 1px #333;box-shadow:1px 1px 1px #333}.item-wrap{float:right;width:14px;height:26px;padding:1px;margin:1px;border-radius:3px;cursor:pointer}.item-wrap:hover{background:#dcdcdc}.color-selector-item{float:right;width:14px;height:100%;background-color:#cecece;border-radius:3px}.copyright{font-size:12px;color:#efefef;margin-top:50px;text-align:center}.copyright:hover{color:#b2b2b2}.hide{display:none !important}#toast{position:fixed;top:30px;background:#dd4b39;color:white;padding: 6px 16px;border-radius:5px;box-shadow:0 0 5px grey;left:50%;z-index:999}</style>'), defaultBgColor = "#0099ff", defaultColor = "#ffffff", $("body").append('<div id="toast" style="display:none"></div>'), window.axpData = {
+			isNoteShow: !1,
+			noteWidth: 450,
+			colorSet: {}
+		}, oldMarkers = $('div[data-label="AxurePlus-Marker"]').add('div[data-label="axp-markerN"]'), axpMarkers = $('div[data-label="axp-marker"]'), oldMarkerMap = {}, re = /^\d+$/, axpIndex = 0, oldMarkers.each(function() {
+			var b = $.trim($(this).text());
+			re.test(b) && (oldMarkerMap[b] = $(this), parseInt(b) > axpIndex && (axpIndex = parseInt(b)))
+		}), axpMarkers.each(function() {
+			var a = $(this).parent().find('div:has(".panel_state")');
+			(a.width() > 25 || a.height() > 25) && a.addClass("marker-area"), $(this).parent().find('>div:not([data-label^="axp-"])').hide(), $(this).find("[id^=" + $(this).attr("id") + "_]:first").is("div") && 1 == $(this).parent().find('>div[data-label^="axp-"]').length && $(this).addClass("marker-highlight")
+		}), noteContainer = $('<div id="axp-note-container"/>').appendTo($("body")), oldNotes = $('div[data-label="AxurePlus-Note"]').add('div[data-label="axp-notes"]'), newNotes = $('div[data-label="axp-note"]'), oldNotes.find('[data-label="--help"]').remove(), oldNotes.find(">.panel_state").each(function() {
+			var b, a = $(this).attr("data-label").match(/\d+/),
+				c = $(this).find(">div:first");
+			a && oldMarkerMap[a] ? (b = $('<div data-label="axp-note"/>').append(c.find(">*")), parseInt(a) > axpIndex && (axpIndex = parseInt(a))) : b = $('<div data-label="axp-note"/>').append(c.find(">*")), $('<div class="axp-note-item" ori-state="' + $(this).attr("data-label") + '"/>').append(b).appendTo(noteContainer).css(getWHCss(b)), a && oldMarkerMap[a] ? addValidIndex(b.parent(), a, oldMarkerMap[a].attr("id")) : addInvalidIndex(b.parent())
+		}), oldMarkerMap = null, newNotes.each(function() {
+			var a, b, c, d, e, f;
+			$(this).parent().find(">div").not($(this)).each(function() {
+				0 == $(this).find('[data-label="axp-marker"]').length && $(this).hide()
+			}), axpIndex++, a = $(this).parent().find('[data-label="axp-marker"]').attr("axp-index", axpIndex).attr("id"), b = $(this).find('[data-label="axp-line"]:first'), c = $(this).find(">div").not(b), d = c.first().find(">.panel_state:first"), 1 == c.length && 1 == d.length ? (e = $('<div data-label="axp-note"/>').append(d.find(">div:first>*")), $('<div class="axp-note-item"/>').append(e).appendTo(noteContainer).css(getWHCss(e)), addValidIndex(e.parent(), axpIndex, a)) : (f = {
+				left: -b.position().left,
+				top: -b.position().top
+			}, $('<div class="axp-note-item" axp-left="' + -f.left + '" axp-top="' + -f.top + '"/>').append($(this)).appendTo(noteContainer).css($.extend(f, getWHCss($(this), -f.left, -f.top))), addValidIndex($(this).parent(), axpIndex, a, -f.left, -f.top)), b.hide()
+		}), noteContainer.prepend('<div id="axp_tip"><div>'), noteContainer.append('<div id="axp_ad"></div>'), pngSrcs = [], oldMarkers.add(axpMarkers).each(function() {
+			var b = $(this).find("[id^=" + $(this).attr("id") + "_]:first");
+			b.is("img") && pngSrcs.push(b.attr("src"))
+		}), 0 == pngSrcs.length) startNote();
+		else for (img = [], flag = 0, imgTotal = pngSrcs.length, i = 0; imgTotal > i; i++) img[i] = new Image, img[i].onload = function() {
+			var a, b;
+			if (flag++, flag == imgTotal && (startNote(), /^file:[\s\S]+$/.test(document.URL))) try {
+				a = document.createElement("img"), a.src = pngSrcs[0], b = document.createElement("canvas").getContext("2d"), b.drawImage(a, 1, 1), b.getImageData(0, 0, 1, 1)
+			} catch (c) {
+				addTip("你的原型在本地查看时无法完全支持颜色分类，请使用Axure的预览功能查看，或使用Firefox浏览器")
+			}
+		}, img[i].src = pngSrcs[i];
+	}
+});
